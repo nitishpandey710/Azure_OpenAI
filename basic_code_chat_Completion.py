@@ -9,8 +9,7 @@ endpoint = "https://nitishpandey24-8531-resource.cognitiveservices.azure.com/"
 model_name = "gpt-4o"
 deployment = "gpt-4o"
 
-subscription_key = "GFvatKksGHi2BTn7teQf0J4I7U4oPtm7L3w3wNxhZJM9o1ZCG7EGJQQJ99BHACHYHv6XJ3w3AAAAACOGRLdh"
-api_version = "2024-12-01-preview"
+subscription_key = "GFvatKksGHi2BTn7teQf0J4I7U4oPtm7L3w3wNxhZJM9o1ZCG7EGJQQJ99BHACHYHv6XJ3w3AAAAACOGRLd"
 
 client = AzureOpenAI(
     api_version=api_version,
@@ -34,5 +33,6 @@ response = client.chat.completions.create(
     top_p=1.0,
     model=deployment
 )
+
 
 print(response.choices[0].message.content)
